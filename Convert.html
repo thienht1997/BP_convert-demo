@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<form>
+<div>
+<d1>Amount</d1>
+		<input id="ketqua" type="text">
+
+<d2>From Currency</d2>
+	<select id="a">
+  	<option>USD</option>
+  	<option>VND</option>
+	</select>
+
+<d3>To Currency</d3>	
+	<select id="b">
+  	<option>USD</option>
+  	<option>VND</option>	
+	</select>	
+     
+        <input type="button" value = "Convert" onclick="Change()"/>
+<script>
+	function Change() {
+	if (document.getElementById("a").value == "USD" &&  document.getElementById("b").value == "VND"){
+	ketqua.value=+eval(ketqua.value)*24000;
+	}
+	else if (document.getElementById("a").value == "VND" && document.getElementById("b").value == "USD"){
+	ketqua.value=+eval(ketqua.value)/24000;
+	}
+	else 
+	ketqua.value=+eval(ketqua.value);
+	}
+</script>
+
+</div>
+</form>
+</body>
+</html>
